@@ -104,6 +104,9 @@ export const InspiringQuotesSection: React.FC = () => {
               src={figure.imageUrl}
               alt={figure.name}
               className="w-full h-full object-cover"
+              onError={(e) => {
+                (e.target as HTMLImageElement).src = '/images/hayrettin-karaca.jpg';
+              }}
               referrerPolicy="no-referrer"
             />
           </div>

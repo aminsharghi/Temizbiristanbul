@@ -3,6 +3,8 @@ import { PollutionType, DirtyAreaReport } from '../types';
 import { ISTANBUL_DISTRICTS } from '../data/mockData';
 import { MapPin, Camera, AlertTriangle, CheckCircle2, UploadCloud, ShieldAlert, ArrowRight } from 'lucide-react';
 
+import { IMAGES } from '../assets/images';
+
 interface ReportPollutionSectionProps {
   onReportSubmitted: (report: DirtyAreaReport) => void;
   onOpenAdminPanel: () => void;
@@ -19,7 +21,7 @@ export const ReportPollutionSection: React.FC<ReportPollutionSectionProps> = ({
   const [fullAddress, setFullAddress] = useState('');
   const [locationNote, setLocationNote] = useState('');
   const [pollutionType, setPollutionType] = useState<PollutionType>('Sahil Temizliği');
-  const [photoPreview, setPhotoPreview] = useState<string>('/src/assets/images/cleanup_before_dirty_beach_1793362603854.jpg');
+  const [photoPreview, setPhotoPreview] = useState<string>(IMAGES.cleanupBefore);
   const [description, setDescription] = useState('');
   const [urgency, setUrgency] = useState<'Düşük' | 'Orta' | 'Acil'>('Orta');
   
@@ -27,9 +29,9 @@ export const ReportPollutionSection: React.FC<ReportPollutionSectionProps> = ({
   const [lastSubmitted, setLastSubmitted] = useState<DirtyAreaReport | null>(null);
 
   const samplePhotos = [
-    { label: 'Kıyı & Deniz Çöpü', url: '/src/assets/images/cleanup_before_dirty_beach_1793362603854.jpg' },
-    { label: 'Orman / Park Atığı', url: '/src/assets/images/volunteers_cleaning_istanbul_1793362604700.jpg' },
-    { label: 'Boğaz Kıyısı Atıkları', url: '/src/assets/images/istanbul_bosphorus_clean_nature_1793362602758.jpg' },
+    { label: 'Kıyı & Deniz Çöpü', url: IMAGES.cleanupBefore },
+    { label: 'Orman / Park Atığı', url: IMAGES.volunteersAction },
+    { label: 'Boğaz Kıyısı Atıkları', url: IMAGES.istanbulBosphorus },
   ];
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -303,6 +305,9 @@ export const ReportPollutionSection: React.FC<ReportPollutionSectionProps> = ({
                         src={photoPreview}
                         alt="Kirlilik fotoğrafı önizlemesi"
                         className="w-full h-full object-cover"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).src = '/images/cleanup-before.jpg';
+                        }}
                       />
                     ) : (
                       <div className="text-center p-3 text-slate-400">

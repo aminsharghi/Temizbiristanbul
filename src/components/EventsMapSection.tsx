@@ -264,6 +264,9 @@ export const EventsMapSection: React.FC<EventsMapSectionProps> = ({
                       src={activeEvent.photoUrl}
                       alt={activeEvent.title}
                       className="w-full h-full object-cover"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).src = '/images/volunteers.jpg';
+                      }}
                       referrerPolicy="no-referrer"
                     />
                     <div className="absolute top-3 left-3">
@@ -379,6 +382,9 @@ export const EventsMapSection: React.FC<EventsMapSectionProps> = ({
                       src={evt.photoUrl}
                       alt={evt.title}
                       className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).src = '/images/volunteers.jpg';
+                      }}
                       referrerPolicy="no-referrer"
                     />
                     <div className="absolute top-3 left-3">

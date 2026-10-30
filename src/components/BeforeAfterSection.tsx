@@ -175,6 +175,9 @@ export const BeforeAfterSection: React.FC<BeforeAfterSectionProps> = ({
                   src={current.afterImage}
                   alt={`${current.location} Temizlik Sonrası`}
                   className="absolute inset-0 w-full h-full object-cover"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = '/images/cleanup-after.jpg';
+                  }}
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute top-4 right-4 bg-emerald-600/90 backdrop-blur-md text-white font-bold text-xs px-3 py-1.5 rounded-xl shadow-md pointer-events-none">
@@ -191,6 +194,9 @@ export const BeforeAfterSection: React.FC<BeforeAfterSectionProps> = ({
                     alt={`${current.location} Temizlik Öncesi Kirlilik`}
                     className="absolute inset-0 w-full h-full object-cover max-w-none"
                     style={{ width: containerRef.current ? `${containerRef.current.clientWidth}px` : '100%' }}
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = '/images/cleanup-before.jpg';
+                    }}
                     referrerPolicy="no-referrer"
                   />
                   <div className="absolute top-4 left-4 bg-amber-600/90 backdrop-blur-md text-white font-bold text-xs px-3 py-1.5 rounded-xl shadow-md pointer-events-none">
@@ -236,6 +242,9 @@ export const BeforeAfterSection: React.FC<BeforeAfterSectionProps> = ({
                   src={current.beforeImage}
                   alt="Öncesi Kirli Durum"
                   className="w-full h-64 sm:h-80 object-cover group-hover:scale-102 transition-transform"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = '/images/cleanup-before.jpg';
+                  }}
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute top-3 left-3 bg-amber-600/90 text-white font-bold text-xs px-3 py-1.5 rounded-xl shadow-md">
@@ -253,6 +262,9 @@ export const BeforeAfterSection: React.FC<BeforeAfterSectionProps> = ({
                   src={current.afterImage}
                   alt="Sonrası Temizlenmiş Durum"
                   className="w-full h-64 sm:h-80 object-cover group-hover:scale-102 transition-transform"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = '/images/cleanup-after.jpg';
+                  }}
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute top-3 right-3 bg-emerald-600/90 text-white font-bold text-xs px-3 py-1.5 rounded-xl shadow-md">

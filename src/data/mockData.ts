@@ -1,4 +1,5 @@
 import { CleanupEvent, BeforeAfterStory, InspiringFigure, DirtyAreaReport } from '../types';
+import { IMAGES } from '../assets/images';
 
 export const ISTANBUL_DISTRICTS = [
   'Adalar', 'Arnavutköy', 'Ataşehir', 'Avcılar', 'Bağcılar', 'Bahçelievler',
@@ -23,7 +24,7 @@ export const INITIAL_EVENTS: CleanupEvent[] = [
     eventDate: '01 Kasım 2026, 09:30',
     volunteerTarget: 60,
     currentVolunteers: 42,
-    photoUrl: '/src/assets/images/cleanup_before_dirty_beach_1793362603854.jpg',
+    photoUrl: IMAGES.cleanupBefore,
     description: 'Hafta sonu boyunca denizden vuran plastik ambalajlar ve kıyı kayalıklarına sıkışmış atıklar toplanacaktır. Eldiven ve çöp torbaları platform tarafından sağlanacaktır.',
     tags: ['Kıyı Temizliği', 'Mikroplastik', 'Eldiven Sağlanır']
   },
@@ -39,7 +40,7 @@ export const INITIAL_EVENTS: CleanupEvent[] = [
     eventDate: '02 Kasım 2026, 10:00',
     volunteerTarget: 50,
     currentVolunteers: 36,
-    photoUrl: '/src/assets/images/volunteers_cleaning_istanbul_1793362604700.jpg',
+    photoUrl: IMAGES.volunteersAction,
     description: 'Sonbahar piknik sezonu sonrası orman patikaları ve gölet çevresindeki cam şişe, teneke ve plastik atıkların temizlenmesi ve geri dönüşüme kazandırılması hedeflenmektedir.',
     tags: ['Orman Koruma', 'Geri Dönüşüm', 'Aile Dostu']
   },
@@ -55,7 +56,7 @@ export const INITIAL_EVENTS: CleanupEvent[] = [
     eventDate: '30 Ekim 2026, 14:00',
     volunteerTarget: 35,
     currentVolunteers: 31,
-    photoUrl: '/src/assets/images/istanbul_bosphorus_clean_nature_1793362602758.jpg',
+    photoUrl: IMAGES.istanbulBosphorus,
     description: 'Tarihi yarımada manzaralı kıyı şeridinde sigara izmariti, meşrubat kutuları ve naylon atıkların temizliği gönüllü ekiplerimizle sürmektedir.',
     tags: ['Tarihi Doku', 'Boğaz Hattı', 'Aktif Saha']
   },
@@ -71,7 +72,7 @@ export const INITIAL_EVENTS: CleanupEvent[] = [
     eventDate: '07 Kasım 2026, 10:30',
     volunteerTarget: 40,
     currentVolunteers: 18,
-    photoUrl: '/src/assets/images/volunteers_cleaning_istanbul_1793362604700.jpg',
+    photoUrl: IMAGES.volunteersAction,
     description: 'Mahalle sakinleri ve genç gönüllüler ile kentsel yeşil vahanın derinlemesine temizliği, kırık camların toplanması ve kompost bilgilendirmesi.',
     tags: ['Şehir Parkı', 'Kompost Atölyesi', 'Gençlik']
   },
@@ -87,7 +88,7 @@ export const INITIAL_EVENTS: CleanupEvent[] = [
     eventDate: '08 Kasım 2026, 11:00',
     volunteerTarget: 45,
     currentVolunteers: 29,
-    photoUrl: '/src/assets/images/cleanup_after_clean_beach_1793362603306.jpg',
+    photoUrl: IMAGES.cleanupAfter,
     description: 'Adalara vapurla ulaşılarak sahilde biriken balıkçı ağları, şamandıra parçaları ve pet şişeler ayrıştırılarak belediye atık merkezine teslim edilecektir.',
     tags: ['Adalar', 'Deniz Ekosistemi', 'Ayrıştırma']
   },
@@ -103,7 +104,7 @@ export const INITIAL_EVENTS: CleanupEvent[] = [
     eventDate: '24 Ekim 2026, 10:00',
     volunteerTarget: 30,
     currentVolunteers: 34,
-    photoUrl: '/src/assets/images/cleanup_after_clean_beach_1793362603306.jpg',
+    photoUrl: IMAGES.cleanupAfter,
     description: 'Haliç kıyısındaki tarihi sur dipleri ve parklar 34 gönüllümüz tarafından temizlendi ve 280 kg atık geri dönüşüme kazandırıldı.',
     collectedKg: 280,
     tags: ['Tamamlandı', 'Haliç Temiz', 'Başarı Hikayesi']
@@ -117,8 +118,8 @@ export const INITIAL_BEFORE_AFTER: BeforeAfterStory[] = [
     location: 'Gümüşdere Koyu, Sarıyer',
     district: 'Sarıyer',
     date: '18 Ekim 2026',
-    beforeImage: '/src/assets/images/cleanup_before_dirty_beach_1793362603854.jpg',
-    afterImage: '/src/assets/images/cleanup_after_clean_beach_1793362603306.jpg',
+    beforeImage: IMAGES.cleanupBefore,
+    afterImage: IMAGES.cleanupAfter,
     collectedKg: 620,
     volunteersJoined: 54,
     summary: 'Karadeniz dalgalarının kıyıya sürüklediği yüzlerce plastik kasa, terkedilmiş ağ ve tek kullanımlık pet şişe 54 gönüllümüzle 5 saatlik titiz çalışma sonucu temizlendi.',
@@ -130,8 +131,8 @@ export const INITIAL_BEFORE_AFTER: BeforeAfterStory[] = [
     location: 'Aydos Ormanı 2. Kapı Mevkii, Kartal / Pendik',
     district: 'Kartal',
     date: '11 Ekim 2026',
-    beforeImage: '/src/assets/images/cleanup_before_dirty_beach_1793362603854.jpg',
-    afterImage: '/src/assets/images/istanbul_bosphorus_clean_nature_1793362602758.jpg',
+    beforeImage: IMAGES.cleanupBefore,
+    afterImage: IMAGES.istanbulBosphorus,
     collectedKg: 430,
     volunteersJoined: 38,
     summary: 'Yangın tehlikesi oluşturan kırık cam şişeler, kömür külleri ve plastik tabaklar toplanarak orman zemini nefes alır hale getirildi.',
@@ -143,8 +144,8 @@ export const INITIAL_BEFORE_AFTER: BeforeAfterStory[] = [
     location: 'Çubuklu İskelesi Yanı, Beykoz',
     district: 'Beykoz',
     date: '04 Ekim 2026',
-    beforeImage: '/src/assets/images/cleanup_before_dirty_beach_1793362603854.jpg',
-    afterImage: '/src/assets/images/cleanup_after_clean_beach_1793362603306.jpg',
+    beforeImage: IMAGES.cleanupBefore,
+    afterImage: IMAGES.cleanupAfter,
     collectedKg: 350,
     volunteersJoined: 42,
     summary: 'Boğaz akıntısıyla kayalık aralarına sıkışmış poşetler ve ambalajlar özel aparatlarla çekilerek sahil hattı eski berrak görünümüne kavuştu.',
@@ -159,7 +160,7 @@ export const INSPIRING_FIGURES: InspiringFigure[] = [
     role: 'TEMA Vakfı Kurucusu & "Toprak Dede"',
     quote: 'Para kazanırsınız, biter; bina yaparsınız, yıkılır. Fakat yok olan doğayı geri getiremezsiniz. Yaşamak istiyorsak toprağımızı ve doğamızı korumak zorundayız.',
     subquote: 'Doğayı korumak bir tercih değil, yaşamsal bir zorunluluktur.',
-    imageUrl: '/src/assets/images/hayrettin_karaca_nature_1793362604633.jpg',
+    imageUrl: IMAGES.hayrettinKaraca,
     lifespan: '1922 – 2020'
   },
   {
@@ -168,7 +169,7 @@ export const INSPIRING_FIGURES: InspiringFigure[] = [
     role: 'Türkiye Cumhuriyeti’nin Kurucusu',
     quote: 'Ormansız ve ağaçsız yurt vatan değildir. Yeşil görmeyen gözler renk zevkinden yoksundur. Burasını öyle bir ağaçlandırınız ki, kör bir insan dahi yeşillikler arasında olduğunu anlasın.',
     subquote: 'Yalova’da bir çınar dalını kesmemek için köşkü yürüten doğa sevgisi.',
-    imageUrl: 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=400&q=80',
+    imageUrl: IMAGES.ataturkPortrait,
     lifespan: '1881 – 1938'
   },
   {
@@ -177,7 +178,7 @@ export const INSPIRING_FIGURES: InspiringFigure[] = [
     role: 'Biyolog, Yazar & Modern Çevre Hareketinin Öncüsü',
     quote: 'Doğanın dengesi insan iradesinin üstündedir. Doğaya hükmetmeye kalkışmak kibirden başka bir şey değildir; çünkü biz doğanın bir parçasıyız, efendisi değil.',
     subquote: '‘Sessiz Bahar’ (Silent Spring) kitabıyla dünya çevre bilincini uyandırdı.',
-    imageUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80',
+    imageUrl: IMAGES.rachelCarson,
     lifespan: '1907 – 1964'
   },
   {
@@ -186,7 +187,7 @@ export const INSPIRING_FIGURES: InspiringFigure[] = [
     role: 'Primatolog, Antropolog & BM Barış Elçisi',
     quote: 'Yaptığınız her hareket dünyada bir fark yaratır. Ne tür bir fark yaratmak istediğinize karar vermelisiniz. Birlikte hareket ettiğimizde temiz bir gelecek mümkündür.',
     subquote: 'Her birey önemlidir, her bireyin bir rolü vardır, her birey bir fark yaratır.',
-    imageUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80',
+    imageUrl: IMAGES.janeGoodall,
     lifespan: '1934 – Günümüz'
   },
   {
@@ -195,26 +196,8 @@ export const INSPIRING_FIGURES: InspiringFigure[] = [
     role: 'Doğa Tarihçisi ve Çevre Savunucusu',
     quote: 'Gezegenimizi kurtarmak artık sadece bilimsel bir mesele değil; ahlaki bir sorumluluktur. Doğayı temiz tutmak çocuklarımıza borcumuzdur.',
     subquote: 'Gezegenimizin sağlığı, içinde yaşayan her bir canlının ortak çabasına bağlıdır.',
-    imageUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80',
+    imageUrl: IMAGES.davidAttenborough,
     lifespan: '1926 – Günümüz'
-  },
-  {
-    id: 'fig-6',
-    name: 'Wangari Maathai',
-    role: 'Nobel Barış Ödüllü Çevre Aktivisti',
-    quote: 'Bir tohum ektiğinizde, sadece bir ağaç yetiştirmezsiniz; geleceğe umut ve yaşam ekersiniz. Küçük adımlar birleştiğinde dağları yerinden oynatır.',
-    subquote: 'Yeşil Kuşak Hareketi ile 50 milyondan fazla ağaç dikilmesine öncülük etti.',
-    imageUrl: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=400&q=80',
-    lifespan: '1940 – 2011'
-  },
-  {
-    id: 'fig-7',
-    name: 'Jacques-Yves Cousteau',
-    role: 'Okyanus Bilimci & Deniz Koruma Öncüsü',
-    quote: 'Deniz, büyülü dokunuşuyla insanı bir kez sardığında, sonsuza dek hayretler içinde tutar. Suları ve kıyıları kirletmek kendi yaşam kaynağımızı yok etmektir.',
-    subquote: 'Denizler geleceğimizdir, kıyılarımızı korumak zorundayız.',
-    imageUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80',
-    lifespan: '1910 – 1997'
   }
 ];
 
@@ -228,7 +211,7 @@ export const INITIAL_PENDING_REPORTS: DirtyAreaReport[] = [
     fullAddress: 'Yeşilköy Çiroz Plajı batı çıkışı, kayalık alan',
     locationNote: 'Plajın bittiği noktada mendirek arkası',
     pollutionType: 'Sahil Temizliği',
-    photoUrl: '/src/assets/images/cleanup_before_dirty_beach_1793362603854.jpg',
+    photoUrl: IMAGES.cleanupBefore,
     description: 'Dalgalarla gelip kayalıkların arasına sıkışan yüzlerce pet şişe ve plastik poşet var. Çocukların oyun oynadığı alana yakın.',
     urgency: 'Acil',
     status: 'pending',
@@ -243,7 +226,7 @@ export const INITIAL_PENDING_REPORTS: DirtyAreaReport[] = [
     fullAddress: 'Tabiat Parkı 3. Yürüyüş Parkuru başlangıcı',
     locationNote: 'Ahşap köprünün 150 metre ilerisi',
     pollutionType: 'Orman Temizliği',
-    photoUrl: '/src/assets/images/volunteers_cleaning_istanbul_1793362604700.jpg',
+    photoUrl: IMAGES.volunteersAction,
     description: 'Piknikçilerin bıraktığı tek kullanımlık ambalajlar ve mangal külleri orman zeminine yayılmış durumda.',
     urgency: 'Orta',
     status: 'pending',

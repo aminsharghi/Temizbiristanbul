@@ -81,6 +81,9 @@ export const AdminApprovalModal: React.FC<AdminApprovalModalProps> = ({
                         src={rep.photoUrl}
                         alt="Bildirilen alan"
                         className="w-full h-full object-cover"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).src = '/images/cleanup-before.jpg';
+                        }}
                       />
                       <div className="absolute top-2 left-2">
                         <span className={`px-2 py-0.5 rounded text-[10px] font-bold ${
